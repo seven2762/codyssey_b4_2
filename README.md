@@ -1,4 +1,4 @@
-# b1-2 — 시스템 장애 분석 및 이슈 리포트
+# 4-2 — 시스템 장애 분석 및 이슈 리포트
 
 제공된 Linux amd64 바이너리 `agent-leak-app-x86`으로 OOM·CPU·Deadlock을
 재현하고, 관제 로그와 Before/After 비교를 GitHub Issue 형식으로 정리한다.
@@ -21,12 +21,13 @@
 ## macOS + OrbStack에서 실행
 
 ```bash
+export MACHINE_NAME=4-2-agent
 ./orbstack-machine.sh demo
 ```
 
 amd64 Ubuntu VM을 생성·시작하고 일반 사용자 `agent` 환경을 구성한 뒤,
-필수 6개 실행 → 증거 검사 → 로컬 회수를 수행한다. VM 이름은 기본 `b1-2-agent`이며
-`MACHINE_NAME`으로 변경할 수 있다. 실행에는 약 4~5분이 걸리며 최초 VM 설치 시간은 별도다.
+필수 6개 실행 → 증거 검사 → 로컬 회수를 수행한다. 위 예시의 VM 이름은 `4-2-agent`이며
+`MACHINE_NAME`으로 지정한다. 실행에는 약 4~5분이 걸리며 최초 VM 설치 시간은 별도다.
 
 ```bash
 ./orbstack-machine.sh provision  # VM 시작 및 필수 계정·파일·환경 구성
