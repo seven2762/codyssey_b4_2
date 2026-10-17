@@ -96,4 +96,3 @@ After 생존은 관측 구간으로 한정하며, 관측 만료 후 스크립트
 요청한 [동기화 시각화 HTML](visualizations/synchronization.html)은 유지한다.
 Mutex·Semaphore·Deadlock을 단계별로 조작하는 오프라인 교육 모델이며,
 실제 OS 관제 증거와는 구분한다. 모델 검사: `node tests/test_synchronization.cjs`.
-# codyssey_b4_2
