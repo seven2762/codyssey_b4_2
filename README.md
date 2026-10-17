@@ -91,8 +91,3 @@ python3 tests/check_evidence.py --strict-cpu
 보호 정책의 종료·회피 확인만으로 실제 CPU 과점유 증거까지 충족했다고 판정하지 않는다.
 After 생존은 관측 구간으로 한정하며, 관측 만료 후 스크립트 정리와 앱 자체 종료를 구분한다.
 
-## 별도 학습 페이지
-
-요청한 [동기화 시각화 HTML](visualizations/synchronization.html)은 유지한다.
-Mutex·Semaphore·Deadlock을 단계별로 조작하는 오프라인 교육 모델이며,
-실제 OS 관제 증거와는 구분한다. 모델 검사: `node tests/test_synchronization.cjs`.
