@@ -1,0 +1,53 @@
+PASS: monitor.sh is directly executable
+PASS: run-scenario.sh is directly executable
+PASS: setup-agent-env.sh is directly executable
+PASS: run-all-scenarios.sh is directly executable
+PASS: verify-results.sh is directly executable
+PASS: provision-orbstack.sh is directly executable
+PASS: orbstack-machine.sh is directly executable
+PASS: setup-agent-env.sh configures a temporary agent home
+PASS: setup creates upload directory
+PASS: setup creates API key directory
+PASS: setup creates log directory
+PASS: setup creates the required key file
+PASS: setup writes the binary's expected test key
+PASS: setup writes a sourceable environment file
+PASS: setup writes the required port
+PASS: setup rejects ports outside the mission contract
+PASS: setup preserves the valid key on repeated execution
+PASS: setup rejects an incorrect existing key
+PASS: setup is idempotent and does not overwrite an existing key
+PASS: run-scenario.sh contract fixture completes
+PASS: runner persists application exit code in run.log
+PASS: runner persists scenario environment in run.log
+PASS: runner distinguishes natural exit from timeout cleanup
+PASS: runner captures application output
+PASS: run-all-scenarios.sh executes the full workflow
+PASS: run-all includes OOM Before
+PASS: run-all includes OOM After
+PASS: run-all includes CPU Before
+PASS: run-all includes CPU After
+PASS: run-all includes Deadlock Before
+PASS: run-all includes Deadlock After
+PASS: run-all excludes optional scheduling scenario
+PASS: run-all verifies evidence after collection
+PASS: verify-results.sh accepts complete valid evidence
+PASS: Deadlock After fixture remains free of blocked workers
+PASS: verify-results.sh rejects runner cleanup as CPU policy termination
+PASS: verify-results.sh rejects missing CPU failure evidence
+PASS: orbstack-machine.sh exposes help without requiring OrbStack
+PASS: host CLI documents full scenario execution
+PASS: host CLI documents VM/evidence verification
+PASS: host CLI excludes VM reset management
+PASS: host CLI documents evidence collection
+PASS: host CLI rejects option/path-like machine names
+PASS: host CLI rejects removed VM deletion action
+PASS: OOM Before application evidence exists
+PASS: OOM After application evidence exists
+PASS: OOM Before records the MemoryGuard failure
+PASS: OOM After records recovery
+PASS: CPU Before records the watchdog failure
+PASS: CPU After remains below the watchdog threshold
+PASS: checked-in VM evidence passes the full verifier
+
+All submission checks passed.

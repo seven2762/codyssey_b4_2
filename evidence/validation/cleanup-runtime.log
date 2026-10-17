@@ -1,0 +1,178 @@
+
+==================================================================
+[run-all] oom_before (memory=128 cpu=50 multithread=false seconds=40)
+==================================================================
+label=oom_before
+started_at=2026-10-17T12:42:11Z
+MEMORY_LIMIT=128
+CPU_MAX_OCCUPY=50
+MULTI_THREAD_ENABLE=false
+max_seconds=40
+launcher_pid=13101
+monitor_pid=13104
+/home/agent/agent-app/bin/run-scenario.sh: line 130: 13101 Killed                  "$APP_BIN" > "$APP_LOG" 2>&1
+timed_out=false
+app_exit_code=137
+monitor_exit_code=0
+elapsed_seconds=17
+completed_at=2026-10-17T12:42:31Z
+[run-scenario] collected: /home/agent/agent-app/cleanup-verification-20261017/oom_before
+
+==================================================================
+[run-all] oom_after (memory=512 cpu=50 multithread=false seconds=75)
+==================================================================
+label=oom_after
+started_at=2026-10-17T12:42:31Z
+MEMORY_LIMIT=512
+CPU_MAX_OCCUPY=50
+MULTI_THREAD_ENABLE=false
+max_seconds=75
+launcher_pid=13622
+monitor_pid=13625
+timed_out=true
+app_exit_code=143
+monitor_exit_code=0
+elapsed_seconds=75
+completed_at=2026-10-17T12:43:53Z
+[run-scenario] collected: /home/agent/agent-app/cleanup-verification-20261017/oom_after
+
+==================================================================
+[run-all] cpu_before (memory=512 cpu=90 multithread=false seconds=50)
+==================================================================
+label=cpu_before
+started_at=2026-10-17T12:43:53Z
+MEMORY_LIMIT=512
+CPU_MAX_OCCUPY=90
+MULTI_THREAD_ENABLE=false
+max_seconds=50
+launcher_pid=15261
+monitor_pid=15264
+timed_out=false
+app_exit_code=143
+monitor_exit_code=0
+elapsed_seconds=30
+completed_at=2026-10-17T12:44:27Z
+[run-scenario] collected: /home/agent/agent-app/cleanup-verification-20261017/cpu_before
+
+==================================================================
+[run-all] cpu_after (memory=512 cpu=40 multithread=false seconds=45)
+==================================================================
+label=cpu_after
+started_at=2026-10-17T12:44:27Z
+MEMORY_LIMIT=512
+CPU_MAX_OCCUPY=40
+MULTI_THREAD_ENABLE=false
+max_seconds=45
+launcher_pid=16103
+monitor_pid=16106
+timed_out=true
+app_exit_code=143
+monitor_exit_code=0
+elapsed_seconds=45
+completed_at=2026-10-17T12:45:16Z
+[run-scenario] collected: /home/agent/agent-app/cleanup-verification-20261017/cpu_after
+
+==================================================================
+[run-all] deadlock_before (memory=512 cpu=50 multithread=true seconds=35)
+==================================================================
+label=deadlock_before
+started_at=2026-10-17T12:45:16Z
+MEMORY_LIMIT=512
+CPU_MAX_OCCUPY=50
+MULTI_THREAD_ENABLE=true
+max_seconds=35
+launcher_pid=17388
+monitor_pid=17391
+timed_out=true
+app_exit_code=143
+monitor_exit_code=0
+elapsed_seconds=35
+completed_at=2026-10-17T12:45:54Z
+[run-scenario] collected: /home/agent/agent-app/cleanup-verification-20261017/deadlock_before
+
+==================================================================
+[run-all] deadlock_after (memory=512 cpu=50 multithread=false seconds=35)
+==================================================================
+label=deadlock_after
+started_at=2026-10-17T12:45:54Z
+MEMORY_LIMIT=512
+CPU_MAX_OCCUPY=50
+MULTI_THREAD_ENABLE=false
+max_seconds=35
+launcher_pid=18395
+monitor_pid=18398
+timed_out=true
+app_exit_code=143
+monitor_exit_code=0
+elapsed_seconds=35
+completed_at=2026-10-17T12:46:33Z
+[run-scenario] collected: /home/agent/agent-app/cleanup-verification-20261017/deadlock_after
+
+[run-all] validating collected evidence
+[PASS] oom_before application log
+[PASS] oom_before monitor log
+[PASS] oom_before runner metadata
+[PASS] oom_before boot checks
+[PASS] oom_before ready state
+[PASS] oom_after application log
+[PASS] oom_after monitor log
+[PASS] oom_after runner metadata
+[PASS] oom_after boot checks
+[PASS] oom_after ready state
+[PASS] cpu_before application log
+[PASS] cpu_before monitor log
+[PASS] cpu_before runner metadata
+[PASS] cpu_before boot checks
+[PASS] cpu_before ready state
+[PASS] cpu_after application log
+[PASS] cpu_after monitor log
+[PASS] cpu_after runner metadata
+[PASS] cpu_after boot checks
+[PASS] cpu_after ready state
+[PASS] deadlock_before application log
+[PASS] deadlock_before monitor log
+[PASS] deadlock_before runner metadata
+[PASS] deadlock_before boot checks
+[PASS] deadlock_before ready state
+[PASS] deadlock_after application log
+[PASS] deadlock_after monitor log
+[PASS] deadlock_after runner metadata
+[PASS] deadlock_after boot checks
+[PASS] deadlock_after ready state
+[PASS] oom_before memory configuration
+[PASS] oom_before CPU configuration
+[PASS] oom_before concurrency configuration
+[PASS] oom_after memory configuration
+[PASS] oom_after CPU configuration
+[PASS] oom_after concurrency configuration
+[PASS] cpu_before memory configuration
+[PASS] cpu_before CPU configuration
+[PASS] cpu_before concurrency configuration
+[PASS] cpu_after memory configuration
+[PASS] cpu_after CPU configuration
+[PASS] cpu_after concurrency configuration
+[PASS] deadlock_before memory configuration
+[PASS] deadlock_before CPU configuration
+[PASS] deadlock_before concurrency configuration
+[PASS] deadlock_after memory configuration
+[PASS] deadlock_after CPU configuration
+[PASS] deadlock_after concurrency configuration
+[PASS] OOM Before reproduces MemoryGuard termination
+[PASS] OOM Before exits by SIGKILL
+[PASS] OOM Before terminates before runner cleanup
+[PASS] OOM After recovers by flushing memory
+[PASS] OOM After remains alive for the observation window
+[PASS] CPU Before reproduces watchdog termination
+[PASS] CPU Before exits by SIGTERM
+[PASS] CPU Before terminates before runner cleanup
+[PASS] CPU After remains below the watchdog threshold
+[PASS] CPU After remains alive for the observation window
+[PASS] Deadlock Before records blocked workers
+[PASS] Deadlock Before records kernel lock waits
+[PASS] Deadlock Before remains hung for the observation window
+[PASS] Deadlock After disables concurrent workers
+[PASS] Deadlock After has no blocked worker evidence
+[PASS] Deadlock After remains alive through the observation window
+
+All b1-2 evidence checks passed.
+Scope: application scenario checks only; run tests/check_evidence.py for measured trends and OS CPU limitations.

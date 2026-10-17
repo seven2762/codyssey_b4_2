@@ -1,0 +1,7 @@
+----- process tree @ 2026-10-16 17:05:20 -----
+    PID    PPID     TID STAT %CPU %MEM WCHAN  CMD
+   9343    9333    9343 SNl   0.2  0.2 futex_ /home/agent/agent-app/bin/agent-leak-app /home/agent/agent-app/bin/agent-leak-app
+   9343    9333    9566 SNl   0.0  0.2 futex_ /home/agent/agent-app/bin/agent-leak-app /home/agent/agent-app/bin/agent-leak-app
+   9343    9333    9567 SNl   0.0  0.2 futex_ /home/agent/agent-app/bin/agent-leak-app /home/agent/agent-app/bin/agent-leak-app
+    PID    PPID     TID STAT %CPU %MEM WCHAN  CMD
+   9333    9316    9333 S     0.1  0.0 do_wai /home/agent/agent-app/bin/agent-leak-app /home/agent/agent-app/bin/agent-leak-app

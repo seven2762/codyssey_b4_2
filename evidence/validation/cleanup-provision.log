@@ -1,0 +1,2 @@
+[setup-agent-env] ready: source /home/agent/agent-app/.env
+[provision] ready: user=agent home=/home/agent/agent-app
